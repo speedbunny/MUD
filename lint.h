@@ -3,6 +3,7 @@
  */
 
 // Standard library includes for functions previously declared here
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -41,7 +42,7 @@ void backend PROT((void));
 char *xalloc PROT((int));
 void init_string_space PROT((void));
 void error(void); // Example of updated declaration with void
-void fatal(void);
+void fatal(const char *str);
 void add_message(void);
 void trace_log(void);
 void debug_message(void);
@@ -84,7 +85,6 @@ void set_living_name PROT((struct object *, char *));
 void remove_living_name PROT((struct object *));
 struct object *find_living_object PROT((char *, int));
 int lookup_predef PROT((char *));
-void yyerror PROT((char *));
 int hashstr PROT((char *, int, int));
 int lookup_predef PROT((char *));
 char *dump_trace PROT((int));
